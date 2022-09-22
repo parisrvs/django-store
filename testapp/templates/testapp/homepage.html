@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>test app</title>
+    </head>
+    <body style="padding: 20px;">
+        <div>
+            <a href="{% url 'store:homepage' %}">store</a><br><br><br>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'testapp:database_update' %}">Update Database</a><br><br><br>
+            <a href="{% url 'testapp:clear_database' %}">Clear Database (Not Images)</a><br><br><br>
+            <a href="{% url 'testapp:clear_database_images' %}">Clear Database Images</a>
+            {% endif %}
+        </div>
+    </body>
+</html>
