@@ -9,7 +9,7 @@
     <body style="padding: 20px;">
         <div>
             <a href="{% url 'store:homepage' %}">store</a><br><br><br>
-            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
             <a href="{% url 'testapp:database_update' %}">Update Database</a><br><br><br>
             <a href="{% url 'testapp:clear_database' %}">Clear Database (Not Images)</a><br><br><br>
             <a href="{% url 'testapp:clear_database_images' %}">Clear Database Images</a>
