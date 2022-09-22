@@ -370,7 +370,7 @@ def UPDATE_VARIATIONS():
 
     products = Product.objects.all()
     for product in products:
-        for _ in range(random.randint(1, 4)):
+        for _ in range(random.randint(1, 10)):
             v = Variation(
                 product=product,
                 price=Decimal(random.randint(200, 500)),
